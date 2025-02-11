@@ -28,12 +28,16 @@ export function ServicesSection() {
         {SERVICES.map((service) => (
           <Card key={service.title} className="bg-zinc-900/20 border-zinc-800/50">
             <CardHeader>
-              <CardTitle>{service.title}</CardTitle>
+              <CardTitle className="text-white">{service.title}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-zinc-400">{service.description}</p>
-              <Button variant="link" className="mt-4 px-0">
-                {service.cta} <ArrowRight className="ml-2 w-4 h-4" />
+              <Button 
+                variant="ghost" 
+                className="mt-4 px-0 text-zinc-400 hover:text-white hover:bg-transparent group"
+              >
+                {service.cta}
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </CardContent>
           </Card>
