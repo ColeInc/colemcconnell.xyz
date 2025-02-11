@@ -10,10 +10,10 @@ export function HeroSection() {
         <div className="flex-1 space-y-4">
           <div className="bg-zinc-900/20 rounded-lg p-4 border border-zinc-800/50">
             <div className="flex items-center gap-4 mb-4">
-              <Image src="/placeholder.svg" alt="Profile" width={80} height={80} className="rounded-full" />
+              <Image src="/images/profile-avatar.jpg" alt="Profile" width={80} height={80} className="rounded-full" />
               <div>
-                <h1 className="text-2xl font-bold">John Doe</h1>
-                <p className="text-zinc-400">Full Stack Developer & Technical Writer</p>
+                <h1 className="text-2xl font-bold">Cole McConnell</h1>
+                <p className="text-zinc-400">Full Stack Software Engineer & Writer</p>
               </div>
             </div>
             <p className="text-sm text-zinc-400">
@@ -22,14 +22,14 @@ export function HeroSection() {
             </p>
           </div>
           <div className="flex gap-3">
-            <Button variant="outline" size="icon">
-              <Twitter className="w-4 h-4" />
+            <Button variant="outline" size="icon" className="bg-transparent hover:bg-zinc-800 transition-colors">
+              <Twitter className="w-4 h-4 text-zinc-400 hover:text-white transition-colors" />
             </Button>
-            <Button variant="outline" size="icon">
-              <Github className="w-4 h-4" />
+            <Button variant="outline" size="icon" className="bg-transparent hover:bg-zinc-800 transition-colors">
+              <Github className="w-4 h-4 text-zinc-400 hover:text-white transition-colors" />
             </Button>
-            <Button variant="outline" size="icon">
-              <Mail className="w-4 h-4" />
+            <Button variant="outline" size="icon" className="bg-transparent hover:bg-zinc-800 transition-colors">
+              <Mail className="w-4 h-4 text-zinc-400 hover:text-white transition-colors" />
             </Button>
           </div>
         </div>

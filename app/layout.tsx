@@ -1,10 +1,11 @@
-import { Navbar } from "@/components/layout/navbar"
-import { Footer } from "@/components/layout/footer"
+import "@/app/globals.css"
+import { Footer } from "@/components/footer"
+import { Navbar } from "@/components/navbar"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "John Doe - Developer & Technical Writer",
-  description: "Portfolio and blog of John Doe, Full Stack Developer and Technical Writer",
+  title: "Cole McConnell - Full Stack Software Engineer & Writer",
+  description: "Portfolio and Newsletter of Cole McConnell, Full Stack Software Engineer & Writer",
 }
 
 export default function RootLayout({
@@ -14,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen bg-black">
         <Navbar />
         {children}
         <Footer />
