@@ -7,7 +7,6 @@ import { BlogContent } from "./_components/blog-content";
 import { SidebarActions } from "./_components/sidebar-actions";
 
   export default function BlogPost({ params }: { params: { slug: string } }) {
-
   return (
     <div className="min-h-screen bg-gray-950 text-gray-200">
       <article className="container max-w-4xl mx-auto px-4 py-8">
