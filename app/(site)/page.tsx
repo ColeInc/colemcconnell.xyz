@@ -1,7 +1,7 @@
-import { HeroSection } from "@/app/home/_components/hero-section"
-import { ArticlesSection } from "@/app/home/_components/articles-section"
+import { HeroSection } from "@/app/_components/hero-section"
+import { ArticlesSection } from "@/app/_components/articles-section"
 
-export default function Home() {
+export default function HomePage() {
   return (
     <div className="min-h-screen text-white pt-16">
       <div className="max-w-4xl mx-auto">
@@ -14,4 +14,4 @@ export default function Home() {
       </div>
     </div>
   )
-}
+} 

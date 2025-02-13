@@ -64,7 +64,8 @@ export function Footer() {
               </Button>
             </Link>
             </div>
-            <p className="text-sm text-zinc-500">© {new Date().getFullYear()} Cole McConnell</p>
+            <p className="text-sm text-zinc-500">Designed by Cole.</p>
+            <p className="text-xs !mt-1 text-zinc-700">© Copyright {new Date().getFullYear()}</p>
           </div>
         </div>
       </div>
