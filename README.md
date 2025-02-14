@@ -1,5 +1,7 @@
 # Cole McConnell's Personal Website
 
+![Image Description](https://drive.google.com/uc?export=view&id=1RXV89bTSMmVgSPaDvUXbNEls3026HN6R)
+
 This is the codebase for my personal website and blog, hosted at [colemcconnell.xyz](https://colemcconnell.xyz).
 
 ## Tech Stack
