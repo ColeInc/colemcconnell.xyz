@@ -12,7 +12,7 @@ interface ArticleCardProps {
 export function ArticleCard({ article }: ArticleCardProps) {
   return (
     <Card className="group bg-zinc-900/20 border-zinc-700/40 hover:border-zinc-700/60 transition-colors overflow-hidden">
-      <Link href={`/posts/${article.slug.current}`}>
+      <Link href={`/newsletter/${article.slug.current}`}>
         <div className="relative w-full h-48 overflow-hidden">
           {article.mainImage ? (
             <Image
