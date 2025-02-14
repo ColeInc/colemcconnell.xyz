@@ -1,6 +1,6 @@
+import { client } from "@/sanity/lib/client"
 import { ArticleCard } from "./article-card"
 import type { Article } from "@/types/article"
-import { client } from "@/lib/sanity.client"
 import { groq } from "next-sanity"
 
 /**
