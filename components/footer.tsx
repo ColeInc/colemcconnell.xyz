@@ -1,7 +1,7 @@
 import { Mail, Twitter, Linkedin, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import Link from "next/link"
+import { Input } from "./ui/input"
 
 export function Footer() {
   const TWITTER_URL = 'https://twitter.com/cole_mccon'
@@ -10,22 +10,25 @@ export function Footer() {
   const EMAIL_URL = 'mailto:clmccnnll@gmail.com'
 
   return (
-    <footer className="border-t border-zinc-800 bg-black">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-2 gap-8">
+    <footer className="border-t border-zinc-600 bg-black">
+      <div className="container mx-auto px-12 py-12 max-w-5xl">
+        <div className="flex flex-col md:flex-row md:grid-cols-2 justify-between gap-8">
           {/* Newsletter Subscription */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-zinc-200">Subscribe to my Newsletter</h3>
-            <p className="text-sm text-zinc-400">Weekly insights on transitioning from engineer to founder, building profitable SaaS, and escaping the corporate life.</p>
+          <div className="space-y-4 max-w-[530px]">
+            <h3 className="text-lg font-semibold text-zinc-200 !mb-0 pb-0">Subscribe to my Weekly Newsletter</h3>
+            <p className="text-sm text-zinc-400 !mt-2 pt-0">Weekly insights on transitioning from engineer to founder, building profitable SaaS, and escaping the corporate life.</p>
             <form className="flex gap-2">
-              <Input type="email" placeholder="Enter your email" className="bg-zinc-900 border-zinc-800" />
-              <Button>Subscribe</Button>
+              <Input type="email" placeholder="Enter your email" className="bg-zinc-900 border-zinc-600 max-w-[350px]" />
+              
+              <Button className="ml-1 !mt-0 bg-zinc-900 hover:bg-gradient-to-r hover:from-[#6af0a0] hover:to-[#3085ee] text-zinc-100 hover:text-black transition-all">
+            Subscribe
+          </Button>
             </form>
           </div>
 
           {/* Social Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Connect with me</h3>
+            {/* <h3 className="text-lg font-semibold">Connect with me</h3> */}
             <div className="flex gap-2">
             <Link href={TWITTER_URL} target="_blank">
               <Button 
@@ -64,8 +67,8 @@ export function Footer() {
               </Button>
             </Link>
             </div>
-            <p className="text-sm text-zinc-500">Designed by Cole.</p>
-            <p className="text-xs !mt-1 text-zinc-700">© Copyright {new Date().getFullYear()}</p>
+            <p className="text-sm text-zinc-500 md:text-right">Designed by Cole</p>
+            <p className="text-xs !mt-1 text-zinc-700 md:text-right">© Copyright {new Date().getFullYear()}</p>
           </div>
         </div>
       </div>

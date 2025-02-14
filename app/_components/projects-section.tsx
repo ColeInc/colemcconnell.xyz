@@ -37,7 +37,7 @@ export function ProjectsSection() {
       <h2 className="text-xl font-semibold mb-6">Featured Projects</h2>
       <div className="grid md:grid-cols-2 gap-6">
         {PROJECTS.map((project) => (
-          <Card key={project.id} className="bg-zinc-900/20 border-zinc-800/50">
+          <Card key={project.id} className="bg-zinc-900/20 border-zinc-700/50">
             <CardContent className="p-6">
               <div className="aspect-video relative mb-4 rounded-lg overflow-hidden">
                 <Image src="/placeholder.svg" alt="Project preview" fill className="object-cover" />
