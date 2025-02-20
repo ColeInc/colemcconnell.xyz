@@ -1,7 +1,7 @@
 import { Mail, Twitter, Linkedin, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Input } from "./ui/input"
+import { NewsletterForm } from "@/components/newsletter-form"
 
 export function Footer() {
   const TWITTER_URL = 'https://twitter.com/cole_mccon'
@@ -17,13 +17,8 @@ export function Footer() {
           <div className="space-y-4 max-w-[530px]">
             <h3 className="text-lg font-semibold text-zinc-200 !mb-0 pb-0">Subscribe to my Weekly Newsletter</h3>
             <p className="text-sm text-zinc-400 !mt-2 pt-0">Weekly insights on transitioning from engineer to founder, building profitable SaaS, and escaping the corporate life.</p>
-            <form className="flex gap-2">
-              <Input type="email" placeholder="Enter your email" className="bg-zinc-900 border-zinc-600 max-w-[350px]" />
-              
-              <Button className="ml-1 !mt-0 bg-zinc-900 hover:bg-gradient-to-r hover:from-[#6af0a0] hover:to-[#3085ee] text-zinc-100 hover:text-black transition-all">
-            Subscribe
-          </Button>
-            </form>
+            <NewsletterForm className="!ml-0 flex gap-2" />
+            {/* <NewsletterForm className="!ml-0 flex gap-2 max-w-[350px]" /> */}
           </div>
 
           {/* Social Links */}
@@ -67,7 +62,7 @@ export function Footer() {
               </Button>
             </Link>
             </div>
-            <p className="text-sm text-zinc-500 md:text-right">Designed by Cole</p>
+            <p className="text-sm text-zinc-500 md:text-right">Designed by Cole.</p>
             <p className="text-xs !mt-1 text-zinc-700 md:text-right">© Copyright {new Date().getFullYear()}</p>
           </div>
         </div>
@@ -75,3 +70,4 @@ export function Footer() {
     </footer>
   )
 }
+
