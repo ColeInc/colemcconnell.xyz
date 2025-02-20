@@ -43,9 +43,9 @@ const Newsletter = () => {
       <h2 className="text-2xl font-bold text-center mb-4">
         Subscribe to My Newsletter
       </h2>
-      <p className="text-center text-gray-400 mb-6">
-        Get weekly updates delivered straight to your inbox
-      </p>
+      <p className="text-md text-zinc-400">
+            Get weekly insights on transitioning from engineer to founder, building profitable SaaS, and escaping the corporate life.
+          </p>
       
       <form onSubmit={handleSubmit(handleSubscribe)} className="space-y-4">
         <div>

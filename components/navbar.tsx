@@ -33,9 +33,11 @@ export function Navbar() {
           <Link href="/articles" className={`text-sm text-zinc-400 hover:text-white transition-colors uppercase ${robotoMono.className}`}>
             Articles
           </Link>
-          <Button variant="outline" size="sm" className={`ml-4 uppercase bg-gradient-to-br from-[#6af0a0] to-[#3085ee] hover:brightness-110 text-black font-medium border-0 transition-all duration-200 ${robotoMono.className}`}>
-            Newsletter
-          </Button>
+          <Link href="/newsletter">
+            <Button variant="outline" size="sm" className={`ml-4 uppercase bg-gradient-to-br from-[#6af0a0] to-[#3085ee] hover:brightness-110 text-black font-medium border-0 transition-all duration-200 ${robotoMono.className}`}>
+              Newsletter
+            </Button>
+          </Link>
         </div>
       </nav>
     </div>
