@@ -3,7 +3,6 @@ import { NewsletterForm } from "@/components/newsletter-form";
 export default function Home() {
   return (
     <div>
-      {/* <Newsletter /> */}
       <div className="pt-24 pb-12 px-4">
         <div className="mx-auto max-w-3xl bg-zinc-900/20 border border-zinc-700/40 hover:border-zinc-700/60 transition-colors rounded-lg p-6 md:p-8">
           <div className=" max-w-[600px] space-y-6">
