@@ -31,7 +31,8 @@ const Newsletter = () => {
 
       toast.success('Successfully subscribed to the newsletter!');
       reset();
-    } catch (error) {
+    } catch (error: unknown) {
+      console.error('Newsletter subscription error:', error);
       toast.error('Failed to subscribe. Please try again.');
     } finally {
       setIsLoading(false);
