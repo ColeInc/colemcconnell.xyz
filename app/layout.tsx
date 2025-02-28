@@ -1,4 +1,5 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
+import { Toaster } from 'sonner';
 
 export const metadata: Metadata = {
   title: "Cole McConnell - Full Stack Engineer & Writer",
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>{children}</body>
+      <Toaster />
     </html>
   )
 }
