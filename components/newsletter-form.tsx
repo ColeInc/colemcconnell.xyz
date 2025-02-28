@@ -50,7 +50,6 @@ export function NewsletterForm({ className }: NewsletterFormProps) {
             color: "white",
             border: "2px solid #31e1a0",
           },
-          theme: "dark"
         }
       );
 
