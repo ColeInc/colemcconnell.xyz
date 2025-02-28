@@ -21,20 +21,22 @@ export function Navbar() {
               className="rounded-full"
               priority
               /> */}
-            <div className="bg-zinc-800 rounded-md px-2">
-            <span className={`font-medium uppercase text-white ${robotoMono.className}`}>CM</span>
-          </div>
+            <Link href="/">
+              <div className="bg-zinc-800 hover:bg-zinc-900 transition-colors duration-200 rounded-md px-2 py-[4px]">
+                <span className={`font-medium uppercase text-white ${robotoMono.className}`}>CM</span>
+              </div>
+            </Link>
         </div>
 
         <div className="flex items-center gap-6">
-          <Link href="/" className={`text-sm text-zinc-400 hover:text-white transition-colors uppercase ${robotoMono.className}`}>
+          {/* <Link href="/" className={`text-sm text-zinc-400 hover:text-white transition-colors uppercase ${robotoMono.className}`}>
             Home
-          </Link>
+          </Link> */}
           <Link href="/articles" className={`text-sm text-zinc-400 hover:text-white transition-colors uppercase ${robotoMono.className}`}>
             Articles
           </Link>
           <Link href="/newsletter">
-            <Button variant="outline" size="sm" className={`ml-4 uppercase bg-gradient-to-br from-[#6af0a0] to-[#3085ee] hover:brightness-110 text-black font-medium border-0 transition-all duration-200 ${robotoMono.className}`}>
+            <Button variant="outline" size="sm" className={`uppercase bg-gradient-to-br from-[#6af0a0] to-[#3085ee] hover:brightness-110 text-black font-medium border-0 transition-all duration-200 ${robotoMono.className}`}>
               Newsletter
             </Button>
           </Link>
