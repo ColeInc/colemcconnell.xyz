@@ -4,7 +4,7 @@ import { AuthorInfo } from "./_components/author-info"
 import { notFound } from "next/navigation"
 import { PortableText, PortableTextComponents } from "@portabletext/react"
 import type { Article } from "@/types/article"
-import { PT_Serif } from "next/font/google"
+import { Source_Serif_4 } from "next/font/google"
 
 interface PageProps {
   readonly params: Promise<{
@@ -12,8 +12,8 @@ interface PageProps {
   }>
 }
 
-const ptSerif = PT_Serif({ 
-  weight: ['400', '700'],  // PT Serif only has 400 and 700 weights
+const sourceSerif = Source_Serif_4({
+  weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
 })
@@ -48,18 +48,30 @@ export default async function BlogPost({ params }: PageProps) {
           {children}
         </blockquote>
       ),
-      list: ({ children }) => (
-        <li className="pl-4 relative before:absolute before:left-0 before:content-['•'] before:text-[1rem]">
-          {children}
-        </li>
-      ),
     },
     list: {
       bullet: ({ children }) => (
-        <ul className="text-[1rem] list-none space-y-2 mb-6">
+        <ul className="list-disc list-outside ml-6 space-y-2 mb-6 text-[1rem] marker:text-zinc-100">
           {children}
         </ul>
       ),
+      number: ({ children }) => (
+        <ol className="list-decimal list-outside ml-6 space-y-2 mb-6 text-[1rem] marker:text-zinc-100">
+          {children}
+        </ol>
+      )
+    },
+    listItem: {
+      bullet: ({ children }) => (
+        <li className="pl-2 text-zinc-100">
+          {children}
+        </li>
+      ),
+      number: ({ children }) => (
+        <li className="pl-2 text-zinc-100">
+          {children}
+        </li>
+      )
     },
     marks: {
       link: ({ children, value }) => {
@@ -98,7 +110,7 @@ export default async function BlogPost({ params }: PageProps) {
           </p>
 
           
-          <div className={`mt-8 !text-[1rem] ${ptSerif.className}`}>
+          <div className={`mt-8 !text-[1rem] ${sourceSerif.className}`}>
             <PortableText
               value={article.body}
               components={portableTextComponents}
