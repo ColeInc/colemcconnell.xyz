@@ -32,6 +32,35 @@ const ArticleGrid = () => {
   const [currentPage, setCurrentPage] = useState(0)
   const [hasMore, setHasMore] = useState(true)
   
+  // Load initial articles
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadInitialArticles = async () => {
+      setIsLoading(true)
+      const start = 0
+      const end = 10
+      
+      const newArticles = await getArticles(start, end)
+      
+      if (isMounted) {
+        if (newArticles.length < 10) {
+          setHasMore(false)
+        }
+        
+        setArticles(newArticles)  // Don't spread previous articles for initial load
+        setCurrentPage(1)
+        setIsLoading(false)
+      }
+    }
+
+    loadInitialArticles()
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
+  
   const loadMoreArticles = async () => {
     setIsLoading(true)
     const start = currentPage * 10
@@ -48,13 +77,8 @@ const ArticleGrid = () => {
     setIsLoading(false)
   }
 
-  // Load initial articles
-  useEffect(() => {
-    loadMoreArticles()
-  }, [])
-
   return (
-    <div className="space-y-8 max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+    <div className="space-y-8 max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8 pt-24 pb-16">
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {articles.map((article) => (
           <ArticleCard key={article._id} article={article} />

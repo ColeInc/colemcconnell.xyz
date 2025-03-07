@@ -4,12 +4,19 @@ import { AuthorInfo } from "./_components/author-info"
 import { notFound } from "next/navigation"
 import { PortableText, PortableTextComponents } from "@portabletext/react"
 import type { Article } from "@/types/article"
+import { PT_Serif } from "next/font/google"
 
 interface PageProps {
   readonly params: Promise<{
     readonly slug: string
   }>
 }
+
+const ptSerif = PT_Serif({ 
+  weight: ['400', '700'],  // PT Serif only has 400 and 700 weights
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export default async function BlogPost({ params }: PageProps) {
   const resolvedParams = await params
@@ -67,8 +74,8 @@ export default async function BlogPost({ params }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-200">
-      <article className="container max-w-4xl mx-auto px-4 pt-24 pb-8">
+    <div className="min-h-screen text-gray-200">
+      <article className="container max-w-3xl mx-auto px-4 pt-24 pb-8">
         {/* <BlogBreadcrumb /> */}
         {/* <SidebarActions /> */}
         {/* <p className="text-2xl font-bold text-red-500">{params.slug}</p> */}
@@ -91,7 +98,7 @@ export default async function BlogPost({ params }: PageProps) {
           </p>
 
           
-          <div className="mt-8">
+          <div className={`mt-8 !text-[1rem] ${ptSerif.className}`}>
             <PortableText
               value={article.body}
               components={portableTextComponents}
