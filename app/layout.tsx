@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Toaster } from 'sonner';
+import "@/app/globals.css";
+import { ThemeProvider } from "@/app/providers/theme-provider";
 
 export const metadata: Metadata = {
   title: "Cole McConnell - Full Stack Engineer & Writer",
@@ -15,9 +17,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-      <Toaster />
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen bg-background text-foreground">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={true}
+          disableTransitionOnChange
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

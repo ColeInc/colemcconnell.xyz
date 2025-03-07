@@ -11,7 +11,7 @@ interface ArticleCardProps {
 
 export function ArticleCard({ article }: ArticleCardProps) {
   return (
-    <Card className="group bg-zinc-900/20 border-zinc-700/40 hover:border-zinc-700/60 transition-colors overflow-hidden">
+    <Card className="group bg-card/20 border-border hover:border-border/60 transition-colors overflow-hidden">
       <Link href={`/newsletter/${article.slug.current}`}>
         <div className="relative w-full h-48 overflow-hidden">
           {article.mainImage ? (
@@ -23,21 +23,21 @@ export function ArticleCard({ article }: ArticleCardProps) {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw"
             />
           ) : (
-            <div className="w-full h-full bg-zinc-800/50" />
+            <div className="w-full h-full bg-muted" />
           )}
         </div>
         <CardContent className="p-6">
-          <p className="text-xs text-zinc-500 mb-1">
+          <p className="text-xs text-muted-foreground mb-1">
             {new Date(article.publishedAt).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'
             })}
           </p>
-          <h3 className="font-semibold mb-4 text-white group-hover:text-zinc-300 transition-colors">
+          <h3 className="font-semibold mb-4 text-foreground group-hover:text-muted-foreground transition-colors">
             {article.title}
           </h3>
-          <div className="inline-flex items-center text-zinc-400 group-hover:text-white transition-colors">
+          <div className="inline-flex items-center text-muted-foreground group-hover:text-foreground transition-colors">
             <span className="mr-2">Read article</span>
             <ArrowRight className="w-4 h-4 transform transition-transform duration-200 group-hover:translate-x-1" />
           </div>

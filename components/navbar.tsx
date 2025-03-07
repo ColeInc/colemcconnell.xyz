@@ -10,7 +10,7 @@ const robotoMono = Roboto_Mono({
 
 export function Navbar() {
   return (
-    <div className="fixed top-0 w-full z-50 px-4 py-4">
+    <div className="fixed top-0 w-full z-50 px-4 py-4 pointer-events-none">
       <nav className="mx-auto max-w-5xl bg-black/50 backdrop-blur-xl border border-zinc-800 rounded-lg px-2 h-12 flex items-center justify-between">
         <div className="flex items-center gap-2">
             {/* <Image 

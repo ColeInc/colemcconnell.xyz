@@ -3,13 +3,13 @@ import { NewsletterForm } from "@/components/newsletter-form"
 
 export function NewsletterCard() {
   return (
-    <Card className="w-full md:w-[400px] bg-zinc-900/20 border-zinc-700/50 flex-grow">
+    <Card className="w-full md:w-[400px] bg-card/20 border-border flex-grow">
       <CardHeader>
-        <CardTitle className="text-md text-zinc-200 uppercase">Newsletter</CardTitle>
+        <CardTitle className="text-md text-foreground uppercase">Newsletter</CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="space-y-2">
-          <p className="text-sm text-zinc-400">
+          <p className="text-sm text-muted-foreground">
             Get weekly insights on transitioning from engineer to founder, building profitable SaaS, and escaping the corporate life.
           </p>
         </div>

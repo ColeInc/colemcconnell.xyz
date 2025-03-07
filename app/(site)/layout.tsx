@@ -1,6 +1,7 @@
 import "@/app/globals.css"
 import { Footer } from "@/components/footer"
 import { Navbar } from "@/components/navbar"
+import { ThemeToggle } from "@/components/theme-toggle"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,12 +18,11 @@ export default function SiteLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-black">
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <>
+      <ThemeToggle />
+      <Navbar />
+      {children}
+      <Footer />
+    </>
   )
 } 

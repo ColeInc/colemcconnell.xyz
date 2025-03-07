@@ -3,7 +3,7 @@ import { ArticlesSection } from "@/app/_components/articles-section"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen text-white pt-16">
+    <div className="min-h-screen pt-16">
       <div className="max-w-6xl mx-auto">
         <HeroSection />
         <main className="container mx-auto px-4 space-y-12 pb-12">
