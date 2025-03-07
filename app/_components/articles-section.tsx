@@ -10,7 +10,7 @@ import { groq } from "next-sanity"
  */
 async function getRecentArticles(): Promise<Article[]> {
   const query = groq`
-    *[_type == "post"] | order(publishedAt desc)[0...4] {
+    *[_type == "post"] | order(publishedAt desc)[0...9] {
       _id,
       title,
       "preview": array::join(string::split(pt::text(body[0...1]), "")[0...150], "") + "...",
@@ -34,7 +34,7 @@ export async function ArticlesSection() {
   return (
     <section>
       <h2 className="text-xl font-semibold mb-6 uppercase">Articles</h2>
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {articles.map((article) => (
           <ArticleCard key={article._id} article={article} />
         ))}
